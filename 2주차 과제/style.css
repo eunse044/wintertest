@@ -1,0 +1,208 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: #e9ecef;
+    font-family: 'Pretendard-Regular', 'Malgun Gothic', sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    width: 500px;
+    height: 90vh;
+    max-height: 900px;
+    min-height: 600px;
+    background-color: white;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    text-align: center;
+    padding: 25px 0 15px;
+    flex-shrink: 0;
+}
+
+.logo {
+    color: #00d344;
+    font-weight: 900;
+    font-size: 13px;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.header h1 {
+    font-size: 22px;
+    margin: 0;
+    color: #222;
+}
+
+.main-photo {
+    position: relative;
+    width: 100%;
+    flex-grow: 1;
+    min-height: 200px;
+    overflow: hidden;
+}
+
+.main-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    transition: transform 0.5s ease;
+}
+
+.main-photo:hover img {
+    transform: scale(1.05);
+}
+
+.photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    color: white;
+    box-sizing: border-box;
+}
+
+.photo-caption h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.photo-caption p {
+    margin: 4px 0 0;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid #eee;
+    flex-shrink: 0;
+    background-color: white;
+}
+
+.section {
+    padding: 25px;
+}
+
+.artist-section {
+    border-left: 1px solid #eee;
+    background-color: white;
+}
+
+.section h3 {
+    font-size: 15px;
+    color: #00d344;
+    margin: 0 0 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+ol {
+    margin: 0;
+    padding-left: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.8;
+    color: #555;
+}
+
+li {
+    transition: color 0.2s ease;
+}
+
+li:hover {
+    color: #00d344;
+}
+
+li::marker {
+    color: #00d344;
+    font-weight: 900;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid #eee;
+    flex-shrink: 0;
+    background-color: #fcfcfc;
+}
+
+.stat-box {
+    padding: 25px;
+    text-align: center;
+}
+
+.genre-box {
+    border-left: 1px solid #eee;
+}
+
+.stat-box h3 {
+    font-size: 13px;
+    color: #999;
+    margin: 0 0 8px 0;
+    font-weight: normal;
+}
+
+.time-box strong {
+    display: block;
+    font-size: 24px;
+    color: #222;
+    font-weight: 900;
+}
+
+.genres {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+    line-height: 1.4;
+}
+
+#logo {
+    transition: color 0.5s ease;
+}
+
+#songList li {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.playing {
+    color: #00d344 !important;
+    font-weight: 900;
+    transform: translateX(10px);
+}
+
+#mainPhoto {
+    transition: filter 0.5s ease;
+    cursor: pointer;
+}
+
+#timeText {
+    transition: color 0.5s ease;
+}
+
+#mainTitle {
+    transition: color 0.3s ease;
+    cursor: default;
+}
